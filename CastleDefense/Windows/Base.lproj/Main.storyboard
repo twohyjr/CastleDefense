@@ -753,6 +753,44 @@
                         <subviews>
                             <visualEffectView wantsLayer="YES" blendingMode="withinWindow" material="ultraDark" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-6j-ZOz">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
+                                <subviews>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="khs-wg-NRc">
+                                        <rect key="frame" x="39" y="147" width="44" height="23"/>
+                                        <color key="color" red="0.13263959750000001" green="0.36569915320000002" blue="0.41002219579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="sldClearColor_Changed:" target="fGq-ZD-cRe" id="YXy-mN-aPb"/>
+                                        </connections>
+                                    </colorWell>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-GA-u5I">
+                                        <rect key="frame" x="8" y="172" width="151" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="JYZ-Oc-ytu"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Window Settings" id="35X-Ya-q64">
+                                            <font key="font" metaFont="systemBold" size="18"/>
+                                            <color key="textColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="glX-JJ-OW9">
+                                        <rect key="frame" x="87" y="150" width="72" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clear Color" id="YG7-2H-bHk">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="glX-JJ-OW9" firstAttribute="top" secondItem="pbq-GA-u5I" secondAttribute="bottom" constant="5" id="7Tp-Xe-DSY"/>
+                                    <constraint firstItem="pbq-GA-u5I" firstAttribute="top" secondItem="Qo6-6j-ZOz" secondAttribute="top" constant="10" id="DL5-HK-Rpc"/>
+                                    <constraint firstItem="khs-wg-NRc" firstAttribute="leading" secondItem="Qo6-6j-ZOz" secondAttribute="leading" constant="39" id="L46-bW-b3m"/>
+                                    <constraint firstItem="khs-wg-NRc" firstAttribute="top" secondItem="pbq-GA-u5I" secondAttribute="bottom" constant="2" id="Lya-Rd-6CZ"/>
+                                    <constraint firstItem="glX-JJ-OW9" firstAttribute="leading" secondItem="khs-wg-NRc" secondAttribute="trailing" constant="6" id="Ohp-0d-wq9"/>
+                                    <constraint firstItem="pbq-GA-u5I" firstAttribute="trailing" secondItem="glX-JJ-OW9" secondAttribute="trailing" id="Qkj-Yq-TSA"/>
+                                    <constraint firstItem="khs-wg-NRc" firstAttribute="centerY" secondItem="glX-JJ-OW9" secondAttribute="centerY" id="Zbz-7J-N0E"/>
+                                    <constraint firstItem="pbq-GA-u5I" firstAttribute="leading" secondItem="Qo6-6j-ZOz" secondAttribute="leading" constant="10" id="oSP-7S-7FS"/>
+                                </constraints>
                             </visualEffectView>
                         </subviews>
                         <constraints>
@@ -762,6 +800,9 @@
                             <constraint firstItem="Qo6-6j-ZOz" firstAttribute="leading" secondItem="7em-Q9-Sjv" secondAttribute="leading" id="xDg-v5-wzI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sldClearColor" destination="khs-wg-NRc" id="Vz8-pG-cxq"/>
+                    </connections>
                 </viewController>
                 <customObject id="sRa-lk-Dxm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
