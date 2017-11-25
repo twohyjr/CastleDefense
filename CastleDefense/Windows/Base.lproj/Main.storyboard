@@ -746,12 +746,12 @@
         <!--Game Settings-->
         <scene sceneID="GTm-mm-yAv">
             <objects>
-                <viewController title="Game Settings" showSeguePresentationStyle="single" id="fGq-ZD-cRe" sceneMemberID="viewController">
+                <viewController title="Game Settings" showSeguePresentationStyle="single" id="fGq-ZD-cRe" customClass="SettingsViewController" customModule="CastleDefense" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="7em-Q9-Sjv">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView wantsLayer="YES" blendingMode="withinWindow" material="mediumLight" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-6j-ZOz">
+                            <visualEffectView wantsLayer="YES" blendingMode="withinWindow" material="ultraDark" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-6j-ZOz">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
                             </visualEffectView>
                         </subviews>

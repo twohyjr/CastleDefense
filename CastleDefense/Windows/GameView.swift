@@ -6,9 +6,9 @@ class GameView: MTKView {
     required init(coder: NSCoder) {
         super.init(coder: coder)
         
-        renderer = Renderer()
+        self.device = MTLCreateSystemDefaultDevice()
         
-        
+        self.renderer = Renderer(device: device!)
         
         self.delegate = renderer
     }

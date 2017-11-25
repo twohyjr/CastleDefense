@@ -15,6 +15,7 @@
 		BD6B9E251FC90AAA004B0D26 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E241FC90AAA004B0D26 /* SettingsViewController.swift */; };
 		BD6B9E271FC91B9D004B0D26 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E261FC91B9D004B0D26 /* Renderer.swift */; };
 		BD6B9E2A1FC91F4D004B0D26 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E291FC91F4D004B0D26 /* Preferences.swift */; };
+		BD6B9E331FC92672004B0D26 /* BasicShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E321FC92672004B0D26 /* BasicShaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		BD6B9E241FC90AAA004B0D26 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BD6B9E261FC91B9D004B0D26 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		BD6B9E291FC91F4D004B0D26 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		BD6B9E321FC92672004B0D26 /* BasicShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicShaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,17 @@
 			isa = PBXGroup;
 			children = (
 				BD6B9E261FC91B9D004B0D26 /* Renderer.swift */,
+				BD6B9E2F1FC925E7004B0D26 /* Shaders */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		BD6B9E2F1FC925E7004B0D26 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				BD6B9E321FC92672004B0D26 /* BasicShaders.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6B9E0E1FC8FF6E004B0D26 /* AppDelegate.swift in Sources */,
+				BD6B9E331FC92672004B0D26 /* BasicShaders.metal in Sources */,
 				BD6B9E231FC9041B004B0D26 /* GameView.swift in Sources */,
 				BD6B9E2A1FC91F4D004B0D26 /* Preferences.swift in Sources */,
 				BD6B9E131FC8FF6E004B0D26 /* CastleDefense.xcdatamodeld in Sources */,
