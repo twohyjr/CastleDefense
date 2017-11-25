@@ -16,6 +16,8 @@
 		BD6B9E271FC91B9D004B0D26 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E261FC91B9D004B0D26 /* Renderer.swift */; };
 		BD6B9E2A1FC91F4D004B0D26 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E291FC91F4D004B0D26 /* Preferences.swift */; };
 		BD6B9E331FC92672004B0D26 /* BasicShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E321FC92672004B0D26 /* BasicShaders.metal */; };
+		BD6B9E471FC936C2004B0D26 /* MouseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E461FC936C2004B0D26 /* MouseHandler.swift */; };
+		BD6B9E491FC936DD004B0D26 /* InputHanlder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E481FC936DD004B0D26 /* InputHanlder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		BD6B9E261FC91B9D004B0D26 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		BD6B9E291FC91F4D004B0D26 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		BD6B9E321FC92672004B0D26 /* BasicShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicShaders.metal; sourceTree = "<group>"; };
+		BD6B9E461FC936C2004B0D26 /* MouseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseHandler.swift; sourceTree = "<group>"; };
+		BD6B9E481FC936DD004B0D26 /* InputHanlder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHanlder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				BD6B9E161FC8FF6E004B0D26 /* Main.storyboard */,
 				BD6B9E221FC9041B004B0D26 /* GameView.swift */,
 				BD6B9E241FC90AAA004B0D26 /* SettingsViewController.swift */,
+				BD6B9E451FC936B0004B0D26 /* User Input Handlers */,
 			);
 			path = Windows;
 			sourceTree = "<group>";
@@ -116,6 +121,15 @@
 				BD6B9E321FC92672004B0D26 /* BasicShaders.metal */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		BD6B9E451FC936B0004B0D26 /* User Input Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				BD6B9E461FC936C2004B0D26 /* MouseHandler.swift */,
+				BD6B9E481FC936DD004B0D26 /* InputHanlder.swift */,
+			);
+			path = "User Input Handlers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +209,9 @@
 				BD6B9E2A1FC91F4D004B0D26 /* Preferences.swift in Sources */,
 				BD6B9E131FC8FF6E004B0D26 /* CastleDefense.xcdatamodeld in Sources */,
 				BD6B9E271FC91B9D004B0D26 /* Renderer.swift in Sources */,
+				BD6B9E491FC936DD004B0D26 /* InputHanlder.swift in Sources */,
 				BD6B9E251FC90AAA004B0D26 /* SettingsViewController.swift in Sources */,
+				BD6B9E471FC936C2004B0D26 /* MouseHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

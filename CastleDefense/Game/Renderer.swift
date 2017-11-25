@@ -31,6 +31,11 @@ class Renderer: NSObject{
     private func updateViewPreferences(view: MTKView){
         view.clearColor = Preferences.clearColor
     }
+    
+    func updateTrackingArea(view: MTKView){
+        let area = NSTrackingArea(rect: view.bounds, options: [NSTrackingArea.Options.activeAlways, NSTrackingArea.Options.mouseMoved, NSTrackingArea.Options.enabledDuringMouseDrag], owner: view, userInfo: nil)
+        view.addTrackingArea(area)
+    }
 }
 
 extension Renderer: MTKViewDelegate{
