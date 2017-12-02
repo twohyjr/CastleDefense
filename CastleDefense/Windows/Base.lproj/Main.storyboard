@@ -751,7 +751,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView wantsLayer="YES" blendingMode="withinWindow" material="ultraDark" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-6j-ZOz">
+                            <visualEffectView wantsLayer="YES" blendingMode="withinWindow" material="ultraDark" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Qo6-6j-ZOz">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
                                 <subviews>
                                     <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="khs-wg-NRc">

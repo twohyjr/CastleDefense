@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD42E3921FD3235300EAF2C6 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42E3911FD3235300EAF2C6 /* Types.swift */; };
 		BD6B9E0E1FC8FF6E004B0D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E0D1FC8FF6E004B0D26 /* AppDelegate.swift */; };
 		BD6B9E131FC8FF6E004B0D26 /* CastleDefense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E111FC8FF6E004B0D26 /* CastleDefense.xcdatamodeld */; };
 		BD6B9E151FC8FF6E004B0D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6B9E141FC8FF6E004B0D26 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD42E3911FD3235300EAF2C6 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		BD6B9E0A1FC8FF6E004B0D26 /* CastleDefense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CastleDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6B9E0D1FC8FF6E004B0D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD6B9E121FC8FF6E004B0D26 /* CastleDefense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CastleDefense.xcdatamodel; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6B9E261FC91B9D004B0D26 /* Renderer.swift */,
+				BD42E3911FD3235300EAF2C6 /* Types.swift */,
 				BD6B9E2F1FC925E7004B0D26 /* Shaders */,
 			);
 			path = Game;
@@ -208,6 +211,7 @@
 				BD6B9E231FC9041B004B0D26 /* GameView.swift in Sources */,
 				BD6B9E2A1FC91F4D004B0D26 /* Preferences.swift in Sources */,
 				BD6B9E131FC8FF6E004B0D26 /* CastleDefense.xcdatamodeld in Sources */,
+				BD42E3921FD3235300EAF2C6 /* Types.swift in Sources */,
 				BD6B9E271FC91B9D004B0D26 /* Renderer.swift in Sources */,
 				BD6B9E491FC936DD004B0D26 /* InputHanlder.swift in Sources */,
 				BD6B9E251FC90AAA004B0D26 /* SettingsViewController.swift in Sources */,

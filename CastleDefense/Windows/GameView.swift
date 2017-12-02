@@ -10,11 +10,12 @@ class GameView: MTKView {
         
         self.renderer = Renderer(device: device!)
         
+        self.colorPixelFormat = .bgra8Unorm
+        
         renderer.updateTrackingArea(view: self)
         
         self.delegate = renderer
     }
-    
 }
 
 extension GameView{
@@ -61,7 +62,6 @@ extension GameView{
     //Right Mouse Button Clicked
     override func rightMouseDown(with event: NSEvent) {
         MouseHandler.setMouseButtonPressed(button: event.buttonNumber, isOn: true)
-        
     }
     
     override func rightMouseDragged(with event: NSEvent) {
