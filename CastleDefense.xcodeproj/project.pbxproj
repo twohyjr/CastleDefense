@@ -19,6 +19,10 @@
 		BD6B9E331FC92672004B0D26 /* BasicShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E321FC92672004B0D26 /* BasicShaders.metal */; };
 		BD6B9E471FC936C2004B0D26 /* MouseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E461FC936C2004B0D26 /* MouseHandler.swift */; };
 		BD6B9E491FC936DD004B0D26 /* InputHanlder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6B9E481FC936DD004B0D26 /* InputHanlder.swift */; };
+		BDAC65851FD491390087788A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC65841FD491390087788A /* Node.swift */; };
+		BDAC65871FD491A80087788A /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC65861FD491A70087788A /* Circle.swift */; };
+		BDAC65891FD491C60087788A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC65881FD491C60087788A /* Scene.swift */; };
+		BDAC658B1FD496210087788A /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC658A1FD496210087788A /* Maths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		BD6B9E321FC92672004B0D26 /* BasicShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicShaders.metal; sourceTree = "<group>"; };
 		BD6B9E461FC936C2004B0D26 /* MouseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseHandler.swift; sourceTree = "<group>"; };
 		BD6B9E481FC936DD004B0D26 /* InputHanlder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputHanlder.swift; sourceTree = "<group>"; };
+		BDAC65841FD491390087788A /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		BDAC65861FD491A70087788A /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		BDAC65881FD491C60087788A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		BDAC658A1FD496210087788A /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				BD6B9E261FC91B9D004B0D26 /* Renderer.swift */,
+				BDAC65841FD491390087788A /* Node.swift */,
+				BDAC65881FD491C60087788A /* Scene.swift */,
+				BDAC65861FD491A70087788A /* Circle.swift */,
 				BD42E3911FD3235300EAF2C6 /* Types.swift */,
+				BDAC658A1FD496210087788A /* Maths.swift */,
 				BD6B9E2F1FC925E7004B0D26 /* Shaders */,
 			);
 			path = Game;
@@ -209,11 +221,15 @@
 				BD6B9E0E1FC8FF6E004B0D26 /* AppDelegate.swift in Sources */,
 				BD6B9E331FC92672004B0D26 /* BasicShaders.metal in Sources */,
 				BD6B9E231FC9041B004B0D26 /* GameView.swift in Sources */,
+				BDAC65851FD491390087788A /* Node.swift in Sources */,
+				BDAC65891FD491C60087788A /* Scene.swift in Sources */,
 				BD6B9E2A1FC91F4D004B0D26 /* Preferences.swift in Sources */,
+				BDAC65871FD491A80087788A /* Circle.swift in Sources */,
 				BD6B9E131FC8FF6E004B0D26 /* CastleDefense.xcdatamodeld in Sources */,
 				BD42E3921FD3235300EAF2C6 /* Types.swift in Sources */,
 				BD6B9E271FC91B9D004B0D26 /* Renderer.swift in Sources */,
 				BD6B9E491FC936DD004B0D26 /* InputHanlder.swift in Sources */,
+				BDAC658B1FD496210087788A /* Maths.swift in Sources */,
 				BD6B9E251FC90AAA004B0D26 /* SettingsViewController.swift in Sources */,
 				BD6B9E471FC936C2004B0D26 /* MouseHandler.swift in Sources */,
 			);

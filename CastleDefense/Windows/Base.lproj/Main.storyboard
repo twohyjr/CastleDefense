@@ -706,11 +706,11 @@
             <objects>
                 <viewController title="Castle Defense" id="XfG-lQ-9wD" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="GameView" customModule="CastleDefense" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="h4y-Bh-M8X" customClass="GameView" customModule="CastleDefense" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4y-Bh-M8X" customClass="GameView" customModule="CastleDefense" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="800" height="800"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Di-Mc-c3p">
                                         <rect key="frame" x="1" y="-1" width="50" height="32"/>

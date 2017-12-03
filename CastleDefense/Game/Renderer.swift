@@ -4,10 +4,8 @@ class Renderer: NSObject{
     var renderPipelineState: MTLRenderPipelineState!
     var commandQueue: MTLCommandQueue!
     
-    var vertices: [Vertex]!
-    var vertexBuffer: MTLBuffer!
-    
-    
+    var scene: Scene!
+
     var vertexDescriptor: MTLVertexDescriptor{
         let vertexDescriptor = MTLVertexDescriptor()
         
@@ -31,8 +29,7 @@ class Renderer: NSObject{
         
         commandQueue = device.makeCommandQueue()
         buildRenderPipelineState(device: device)
-        buildBuffers(device: device)
-        
+        scene = Scene(device: device)
     }
     
     func buildRenderPipelineState(device: MTLDevice){
@@ -52,17 +49,6 @@ class Renderer: NSObject{
         }catch let error as NSError{
             print("Error creating renderpipeline state: \(error)")
         }
-    }
-    
-    private func buildBuffers(device: MTLDevice){
-        
-        vertices = [
-            Vertex(position: float3(0, 1, 0), color: float4(1,0,0,1)),
-            Vertex(position: float3(-1, -1, 0), color: float4(0,1,0,1)),
-            Vertex(position: float3(1, -1, 0), color: float4(0,0,1,1))
-        ]
-        
-        vertexBuffer = device.makeBuffer(bytes: vertices, length: MemoryLayout<Vertex>.stride * vertices.count, options: [])
     }
     
     private func updateViewPreferences(view: MTKView){
@@ -89,9 +75,7 @@ extension Renderer: MTKViewDelegate{
         //View Updates
         updateViewPreferences(view: view)
         
-        renderCommandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        
-        renderCommandEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertices.count)
+        scene.render(renderCommandEncoder: renderCommandEncoder!)
         
         renderCommandEncoder?.endEncoding()
         commandBuffer?.present(currentDrawable)
