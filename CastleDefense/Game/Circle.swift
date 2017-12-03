@@ -1,25 +1,27 @@
 import MetalKit
 
-class Circle: Node{
+class Circle: Entity{
     
     var vertices: [Vertex] = []
     var vertexBuffer: MTLBuffer!
     var radius: Float!
+    var circleVertexCount: Int!
     
-    init(device: MTLDevice, radius: Float, color: float4){
+    init(device: MTLDevice, radius: Float, circleVertexCount: Int, color: float4){
         super.init()
         self.radius = radius
-        buildVertices(color: color)
+        self.circleVertexCount = circleVertexCount
+        
+        modelConstants.materialColor = color
+        
+        buildVertices()
         buildBuffers(device: device)
     }
     
-    func buildVertices(color: float4){
-        let number = 140
-        let twopi: Float = 2 * Float.pi
-        
-        for i in 0...number{
-            vertices.append(Vertex(position: float3(radius*cos(Float(i) * twopi / Float(number)), radius*sin(Float(i) * twopi / Float(number)), 0), color: color))
-            vertices.append(Vertex(position: float3(0,0, 0), color: color))
+    func buildVertices(){
+        for i in 0...circleVertexCount{
+            vertices.append(Vertex(position: float3(radius*cos(Float(i) * Maths.twopi / Float(circleVertexCount)), radius*sin(Float(i) * Maths.twopi / Float(circleVertexCount)), 0)))
+            vertices.append(Vertex(position: float3(0,0, 0)))
         }
     }
     
@@ -28,6 +30,7 @@ class Circle: Node{
     }
     
     override func render(renderCommandEncoder: MTLRenderCommandEncoder){
+        renderCommandEncoder.setVertexBytes(&modelConstants, length: MemoryLayout<ModelConstants>.stride, index: 1)
         renderCommandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         renderCommandEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: vertices.count)
     }

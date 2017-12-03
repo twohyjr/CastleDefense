@@ -705,15 +705,15 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="Castle Defense" id="XfG-lQ-9wD" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="GameView" customModule="CastleDefense" customModuleProvider="target">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4y-Bh-M8X" customClass="GameView" customModule="CastleDefense" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="800" height="800"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="h4y-Bh-M8X" customClass="GameView" customModule="CastleDefense" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Di-Mc-c3p">
-                                        <rect key="frame" x="1" y="-1" width="50" height="32"/>
+                                        <rect key="frame" x="-2" y="-3" width="50" height="32"/>
                                         <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSListViewTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nl4-48-w2G">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -724,18 +724,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Di-Mc-c3p" secondAttribute="trailing" id="8OC-js-eOw"/>
-                                    <constraint firstItem="9Di-Mc-c3p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h4y-Bh-M8X" secondAttribute="leading" id="Djy-h0-Nd1"/>
-                                    <constraint firstItem="9Di-Mc-c3p" firstAttribute="leading" secondItem="h4y-Bh-M8X" secondAttribute="leading" constant="7" id="ROF-bO-Wge"/>
-                                    <constraint firstAttribute="bottom" secondItem="9Di-Mc-c3p" secondAttribute="bottom" constant="6" id="RXa-L7-d7b"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Di-Mc-c3p" secondAttribute="trailing" constant="20" symbolic="YES" id="SjA-Fe-ciL"/>
+                                    <constraint firstItem="9Di-Mc-c3p" firstAttribute="leading" secondItem="h4y-Bh-M8X" secondAttribute="leading" constant="4" id="b6s-O5-qmM"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Di-Mc-c3p" secondAttribute="bottom" constant="4" id="llO-rB-tfc"/>
                                 </constraints>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="h4y-Bh-M8X" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="LfS-a7-034"/>
-                            <constraint firstAttribute="trailing" secondItem="h4y-Bh-M8X" secondAttribute="trailing" id="bHA-x4-tzI"/>
-                            <constraint firstAttribute="bottom" secondItem="h4y-Bh-M8X" secondAttribute="bottom" id="srq-CL-43l"/>
-                            <constraint firstItem="h4y-Bh-M8X" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="tX8-Ab-eRc"/>
+                            <constraint firstItem="h4y-Bh-M8X" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="5mv-sf-6aD"/>
+                            <constraint firstAttribute="bottom" secondItem="h4y-Bh-M8X" secondAttribute="bottom" id="6Kr-vq-zAy"/>
+                            <constraint firstAttribute="trailing" secondItem="h4y-Bh-M8X" secondAttribute="trailing" id="OHa-aV-Y5N"/>
+                            <constraint firstItem="h4y-Bh-M8X" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="bHy-ye-Dpj"/>
                         </constraints>
                     </view>
                 </viewController>
