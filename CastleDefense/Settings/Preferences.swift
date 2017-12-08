@@ -7,4 +7,5 @@ class Preferences{
     public static func updateClearColor(color: NSColor){
         Preferences.clearColor = MTLClearColor(red: Double(color.redComponent), green: Double(color.greenComponent), blue: Double(color.blueComponent), alpha: Double(color.alphaComponent))
     }
+
 }

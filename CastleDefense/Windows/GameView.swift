@@ -12,6 +12,8 @@ class GameView: MTKView {
         
         self.colorPixelFormat = .bgra8Unorm
         
+        self.depthStencilPixelFormat = .depth32Float
+        
         renderer.updateTrackingArea(view: self)
         
         self.delegate = renderer

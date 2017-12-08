@@ -11,15 +11,26 @@ struct VertexOut{
 };
 
 struct ModelConstants{
+    float4x4 modelMatrix;
     float4 materialColor;
+};
+
+struct SceneConstants{
+    float4x4 projectionMatrix;
+    float4x4 viewMatrix;
 };
 
 vertex VertexOut basic_vertex_shader(const    VertexIn        vIn            [[ stage_in ]],
                                      constant ModelConstants &modelConstants [[ buffer(1) ]],
+                                     constant SceneConstants &sceneConstants [[ buffer(2) ]],
                                      uint     vertexID                       [[ vertex_id ]])
 {
     VertexOut vOut;
-    vOut.position = float4(vIn.position, 1);
+    
+    float4x4 transformationMatrix = modelConstants.modelMatrix;
+    float4 worldPosition = transformationMatrix * float4(vIn.position, 1.0);
+    vOut.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * worldPosition;
+    
     vOut.color = modelConstants.materialColor;
     return vOut;
 }

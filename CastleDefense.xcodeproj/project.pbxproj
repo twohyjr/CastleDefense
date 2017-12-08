@@ -24,6 +24,7 @@
 		BDAC65891FD491C60087788A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC65881FD491C60087788A /* Scene.swift */; };
 		BDAC658B1FD496210087788A /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC658A1FD496210087788A /* Maths.swift */; };
 		BDAC658D1FD498AC0087788A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC658C1FD498AC0087788A /* Entity.swift */; };
+		BDAC658F1FD4AC0F0087788A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAC658E1FD4AC0F0087788A /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		BDAC65881FD491C60087788A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		BDAC658A1FD496210087788A /* Maths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
 		BDAC658C1FD498AC0087788A /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		BDAC658E1FD4AC0F0087788A /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				BD6B9E261FC91B9D004B0D26 /* Renderer.swift */,
 				BDAC65841FD491390087788A /* Node.swift */,
 				BDAC65881FD491C60087788A /* Scene.swift */,
+				BDAC658E1FD4AC0F0087788A /* Camera.swift */,
 				BDAC65861FD491A70087788A /* Circle.swift */,
 				BDAC658C1FD498AC0087788A /* Entity.swift */,
 				BD42E3911FD3235300EAF2C6 /* Types.swift */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDAC658F1FD4AC0F0087788A /* Camera.swift in Sources */,
 				BD6B9E0E1FC8FF6E004B0D26 /* AppDelegate.swift in Sources */,
 				BD6B9E331FC92672004B0D26 /* BasicShaders.metal in Sources */,
 				BD6B9E231FC9041B004B0D26 /* GameView.swift in Sources */,

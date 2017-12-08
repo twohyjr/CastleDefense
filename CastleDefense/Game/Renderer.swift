@@ -4,6 +4,8 @@ class Renderer: NSObject{
     var renderPipelineState: MTLRenderPipelineState!
     var commandQueue: MTLCommandQueue!
     
+    var depthStencilState: MTLDepthStencilState!
+    
     var scene: Scene!
 
     var vertexDescriptor: MTLVertexDescriptor{
@@ -24,8 +26,11 @@ class Renderer: NSObject{
         
         commandQueue = device.makeCommandQueue()
         buildRenderPipelineState(device: device)
+        buildDepthStencilState(device: device)
         scene = Scene(device: device)
     }
+    
+
     
     func buildRenderPipelineState(device: MTLDevice){
         let library = device.makeDefaultLibrary()
@@ -36,6 +41,7 @@ class Renderer: NSObject{
         renderPipelineDescriptor.vertexFunction = vertexFunction
         renderPipelineDescriptor.fragmentFunction = fragmentFunction
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
+        renderPipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
         
         renderPipelineDescriptor.vertexDescriptor = vertexDescriptor
         
@@ -46,6 +52,14 @@ class Renderer: NSObject{
         }
     }
     
+    private func buildDepthStencilState(device: MTLDevice){
+        let depthStencilDescriptor = MTLDepthStencilDescriptor()
+        depthStencilDescriptor.label = "Base Depth Stencil Descriptor"
+        depthStencilDescriptor.isDepthWriteEnabled = true
+        depthStencilDescriptor.depthCompareFunction = .less
+        depthStencilState = device.makeDepthStencilState(descriptor: depthStencilDescriptor)
+    }
+    
     private func updateViewPreferences(view: MTKView){
         view.clearColor = Preferences.clearColor
     }
@@ -54,6 +68,7 @@ class Renderer: NSObject{
         let area = NSTrackingArea(rect: view.bounds, options: [NSTrackingArea.Options.activeAlways, NSTrackingArea.Options.mouseMoved, NSTrackingArea.Options.enabledDuringMouseDrag], owner: view, userInfo: nil)
         view.addTrackingArea(area)
     }
+    
 }
 
 extension Renderer: MTKViewDelegate{
@@ -64,13 +79,16 @@ extension Renderer: MTKViewDelegate{
         guard let renderPassDescriptor = view.currentRenderPassDescriptor, let currentDrawable = view.currentDrawable else { return }
         
         let commandBuffer = commandQueue.makeCommandBuffer()
+
         let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+        renderCommandEncoder?.setDepthStencilState(depthStencilState)
         renderCommandEncoder?.setRenderPipelineState(renderPipelineState)
         
         //View Updates
         updateViewPreferences(view: view)
         
-        scene.render(renderCommandEncoder: renderCommandEncoder!)
+        let deltaTime = 1/Float(view.preferredFramesPerSecond)
+        scene.render(renderCommandEncoder: renderCommandEncoder!, deltaTime: deltaTime)
         
         renderCommandEncoder?.endEncoding()
         commandBuffer?.present(currentDrawable)
